@@ -1,0 +1,50 @@
+.UsersFilter {
+  height: 90vh;
+  width: 100%;
+}
+
+.UsersFilter .box {
+  height: 90vh;
+  overflow-y: scroll;
+  padding: 1rem;
+  background-color: #444;
+}
+
+.UsersFilter .box h1 {
+  color: coral;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.UsersFilter .box .filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.UsersFilter .box .filter input[type="text"] {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  outline: none;
+}
+
+.UsersFilter .box .users .user {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #555;
+  margin-bottom: 1rem;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.UsersFilter .box .users .user h2 {
+  color: coral;
+}
+
+.UsersFilter .box .users .user p {
+  color: white;
+}

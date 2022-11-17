@@ -1,0 +1,24 @@
+.ZDashboard {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.ZDashboard .link-box {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid cornflowerblue;
+  border-radius: 10px;
+}
+
+.ZDashboard .link-box .link {
+  color: #FFF;
+  font-size: 1.5rem;
+}
+
+.ZDashboard .link-box .link:hover {
+  color: cornflowerblue;
+}
+
+.ZDashboard .link-box .desc {
+  color: #FFF;
+}

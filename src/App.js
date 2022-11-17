@@ -1,10 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { mountStoreDevtool } from 'simple-zustand-devtools'
+import useStore from './zstore/zstore'
 import './App.css'
 import BasicFetch from './components/react-query/BasicFetch'
 import BasicXhr from './components/react-query/BasicXhr'
 import RQDashboard from './components/react-query/RQDashboard'
 import Todo from './components/react-query/todos/Todo'
+import UsersFilter from './components/zustand/UsersFilter'
+import ZDashboard from './components/zustand/ZDashboard'
 import MainPage from './pages/MainPage'
+
+if (process.env.NODE_ENV === 'development') {
+  mountStoreDevtool('Store', useStore);
+}
 
 function App() {
   return (
@@ -21,8 +29,8 @@ function App() {
             <Route path='todos' element={<Todo />} />
           </Route>
           <Route path='/zustand' element={<MainPage />}>
-            <Route path='' element={<RQDashboard />} />
-            <Route path='basic-fetch' element={<BasicFetch />} />
+            <Route path='' element={<ZDashboard />} />
+            <Route path='users-filter' element={<UsersFilter />} />
           </Route>
           <Route path='/redux' element={<MainPage />}>
             <Route path='' element={<RQDashboard />} />
