@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "learn go",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "title": "learn node",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "title": "learn mongodb",
+      "completed": false,
+      "id": 5
+    }
+  ]
+}

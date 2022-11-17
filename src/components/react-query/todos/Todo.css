@@ -1,0 +1,70 @@
+.Todo {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.Todo h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.Todo .form-group {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Todo .form-group label {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.Todo .form-group input[type="text"] {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  outline: none;
+}
+
+.Todo .form-group input[type="submit"] {
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.Todo article {
+  border: 1px solid cornflowerblue;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Todo article .todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Todo article .todo label {
+  margin-left: 1rem;
+  color: #fff;
+}
+
+.Todo article .trash {
+  background-color: red;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+}
