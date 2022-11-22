@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import store from './app/store'
+import { Provider } from 'react-redux'
+
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
@@ -13,7 +16,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
       <ReactQueryDevtools initialIsOpen />
     </QueryClientProvider>
   </React.StrictMode>

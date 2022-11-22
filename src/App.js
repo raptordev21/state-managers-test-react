@@ -9,6 +9,8 @@ import Todo from './components/react-query/todos/Todo'
 import UsersFilter from './components/zustand/UsersFilter'
 import ZDashboard from './components/zustand/ZDashboard'
 import MainPage from './pages/MainPage'
+import ReduxDashboard from './components/redux/ReduxDashboard'
+import Counter from './components/redux/counter/Counter'
 
 if (process.env.NODE_ENV === 'development') {
   mountStoreDevtool('Store', useStore);
@@ -33,8 +35,8 @@ function App() {
             <Route path='users-filter' element={<UsersFilter />} />
           </Route>
           <Route path='/redux' element={<MainPage />}>
-            <Route path='' element={<RQDashboard />} />
-            <Route path='basic-fetch' element={<BasicFetch />} />
+            <Route path='' element={<ReduxDashboard />} />
+            <Route path='counter' element={<Counter />} />
           </Route>
         </Routes>
       </Router>
