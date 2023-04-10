@@ -10,3 +10,8 @@ npm run build
 ```bash
 json-server -w data/db.json -p 3500
 ```
+
+## Serve with a static server
+```bash
+serve -s build
+```

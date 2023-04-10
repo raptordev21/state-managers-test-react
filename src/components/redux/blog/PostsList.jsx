@@ -1,0 +1,25 @@
+import { useSelector } from 'react-redux'
+import { selectAllPosts } from '../../../features/blogpost/postsSlice'
+import './PostsList.css'
+
+function PostsList() {
+  // const posts = useSelector(state => state.posts)
+  const posts = useSelector(selectAllPosts)
+
+  const renderedPosts = posts.map((post) => (
+    <article key={post.id}>
+      <h3>{post.title}</h3>
+      <p>{post.content.substring(0, 100)}</p>
+      {/* get first 100 characters for preview using substring */}
+    </article>
+  ))
+
+  return (
+    <section className='PostsList'>
+      <h2>Posts</h2>
+      {renderedPosts}
+    </section>
+  )
+}
+
+export default PostsList

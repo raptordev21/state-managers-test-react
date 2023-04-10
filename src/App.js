@@ -11,6 +11,7 @@ import ZDashboard from './components/zustand/ZDashboard'
 import MainPage from './pages/MainPage'
 import ReduxDashboard from './components/redux/ReduxDashboard'
 import Counter from './components/redux/counter/Counter'
+import PostsList from './components/redux/blog/PostsList'
 
 if (process.env.NODE_ENV === 'development') {
   mountStoreDevtool('Store', useStore);
@@ -37,6 +38,7 @@ function App() {
           <Route path='/redux' element={<MainPage />}>
             <Route path='' element={<ReduxDashboard />} />
             <Route path='counter' element={<Counter />} />
+            <Route path='blog-post' element={<PostsList />} />
           </Route>
         </Routes>
       </Router>

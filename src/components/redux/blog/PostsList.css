@@ -1,0 +1,22 @@
+.PostsList {
+  padding: 2rem;
+}
+
+.PostsList h2 {
+  color: cornflowerblue;
+}
+
+.PostsList article {
+  border: 1px dotted cornflowerblue;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.PostsList article h3 {
+  color: aliceblue;
+}
+
+.PostsList article p {
+  color: gray;
+}
