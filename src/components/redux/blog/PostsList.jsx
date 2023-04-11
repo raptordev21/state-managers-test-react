@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import { selectAllPosts } from '../../../features/blogpost/postsSlice'
 import './PostsList.css'
+import AddPostForm from './AddPostForm'
 
 function PostsList() {
   // const posts = useSelector(state => state.posts)
@@ -16,6 +17,7 @@ function PostsList() {
 
   return (
     <section className='PostsList'>
+      <AddPostForm />
       <h2>Posts</h2>
       {renderedPosts}
     </section>
