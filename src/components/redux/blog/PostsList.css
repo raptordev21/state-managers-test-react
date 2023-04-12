@@ -27,13 +27,14 @@
 }
 
 .PostsList .AddPostForm input[type='text'],
-.PostsList .AddPostForm textarea {
+.PostsList .AddPostForm textarea,
+.PostsList .AddPostForm select {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: aliceblue;
   font-size: 1.2rem;
-  width: 400px;
+  width: 200px;
   padding: 1rem;
 }
 
