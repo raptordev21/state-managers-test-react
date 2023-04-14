@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 import { selectAllPosts } from '../../../features/blogpost/postsSlice'
 import './PostsList.css'
 import AddPostForm from './AddPostForm'
+import PostAuthor from './PostAuthor'
 
 function PostsList() {
   // const posts = useSelector(state => state.posts)
@@ -12,6 +13,9 @@ function PostsList() {
       <h3>{post.title}</h3>
       <p>{post.content.substring(0, 100)}</p>
       {/* get first 100 characters for preview using substring */}
+      <p className='postCredit'>
+        <PostAuthor userId={post.userId} />
+      </p>
     </article>
   ))
 
