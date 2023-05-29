@@ -12,6 +12,7 @@ import MainPage from './pages/MainPage'
 import ReduxDashboard from './components/redux/ReduxDashboard'
 import Counter from './components/redux/counter/Counter'
 import PostsList from './components/redux/blog/PostsList'
+import IdeaPostsList from './components/redux/ideapost/IdeaPostList'
 
 if (process.env.NODE_ENV === 'development') {
   mountStoreDevtool('Store', useStore);
@@ -39,6 +40,7 @@ function App() {
             <Route path='' element={<ReduxDashboard />} />
             <Route path='counter' element={<Counter />} />
             <Route path='blog-post' element={<PostsList />} />
+            <Route path='idea-post' element={<IdeaPostsList />} />
           </Route>
         </Routes>
       </Router>

@@ -1,0 +1,54 @@
+.IdeaPostsList {
+  padding: 2rem;
+}
+
+.IdeaPostsList h2 {
+  color: cornflowerblue;
+}
+
+.IdeaPostsList article {
+  border: 1px dotted cornflowerblue;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+}
+
+.IdeaPostsList article h3 {
+  color: aliceblue;
+}
+
+.IdeaPostsList article p {
+  color: gray;
+}
+
+.IdeaPostsList .AddIdeaPostForm label {
+  color: antiquewhite;
+  padding: 1rem;
+}
+
+.IdeaPostsList .AddIdeaPostForm input[type='text'],
+.IdeaPostsList .AddIdeaPostForm textarea,
+.IdeaPostsList .AddIdeaPostForm select {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: aliceblue;
+  font-size: 1.2rem;
+  width: 200px;
+  padding: 1rem;
+}
+
+.IdeaPostsList .AddIdeaPostForm button {
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  cursor: pointer;
+  border: none;
+}
+
+.IdeaPostsList .ideas-box {
+  height: 400px;
+  overflow-y: scroll;
+}

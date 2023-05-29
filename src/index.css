@@ -1,3 +1,8 @@
+:root {
+  --primary-color: cornflowerblue;
+  --bg-color-t: rgba(34, 34, 34, 0.85);
+}
+
 *,
 *::before,
 *::after {
@@ -20,4 +25,27 @@ a {
 
 ul {
   list-style: none;
+}
+
+/* custom scroll */
+.custom-scroll {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-color-t) var(--primary-color);
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-track,
+.custom-scroll::-webkit-scrollbar-corner {
+  background-color: var(--bg-color-t);
+  box-shadow: inset 0 0 5px var(--primary-color);
 }
