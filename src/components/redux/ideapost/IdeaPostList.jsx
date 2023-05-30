@@ -1,35 +1,43 @@
-import { useSelector } from 'react-redux'
-import { selectAllPosts } from '../../../features/ideapost/ideapostsSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectAllPosts, getPostsStatus, getPostsError, fetchIdeaPosts, reset } from '../../../features/ideapost/ideapostsSlice'
+import { useEffect } from 'react'
 import './IdeaPostList.css'
 import AddIdeaPostForm from './AddIdeaPostForm'
-import IdeaPostAuthor from './IdeaPostAuthor'
-import IdeaTimeAgo from './IdeaTimeAgo'
-import IdeaReactionButtons from './IdeaReactionButtons'
+import { IdeaPostsExcerpt } from './IdeaPostsExcerpt'
 
 function IdeaPostsList() {
+  const dispatch = useDispatch()
+
   const posts = useSelector(selectAllPosts)
+  const postsStatus = useSelector(getPostsStatus)
+  const error = useSelector(getPostsError)
 
-  const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
+  useEffect(() => {
+    dispatch(fetchIdeaPosts())
 
-  const renderedPosts = orderedPosts.map((post) => (
-    <article key={post.id}>
-      <h3>{post.title}</h3>
-      <p>{post.content.substring(0, 100)}</p>
-      {/* get first 100 characters for preview using substring */}
-      <p className='postCredit'>
-        <IdeaPostAuthor userId={post.userId} />
-        <IdeaTimeAgo timestamp={post.date} />
-      </p>
-      <IdeaReactionButtons post={post} />
-    </article>
-  ))
+    return () => {
+      dispatch(reset())
+    }
+  }, [dispatch])
+
+  let content;
+  if (postsStatus === 'loading') {
+    content = <p>"Loading..."</p>;
+  } else if (postsStatus === 'success') {
+    const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
+    content = orderedPosts.map(post => <IdeaPostsExcerpt key={post.id} post={post} />)
+  } else if (postsStatus === 'failed') {
+    content = <p>{error}</p>;
+  }
+
+  console.log('content', content)
 
   return (
     <section className='IdeaPostsList'>
       <AddIdeaPostForm />
       <h2>Ideas</h2>
       <div className="ideas-box custom-scroll">
-        {renderedPosts}
+        {content}
       </div>
     </section>
   )
